@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+
+html, body {
+    min-height: 100vh;
+    background-image: url("/wop-ui-main/ui4/KUVAT/Tausta2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed;
+    font-size: 20px;
+    padding-bottom: 1em;
+
+}
+
+footer{
+height: 50px;
+}
+
+#kirjauduulosnappi {
+    width: 40px;
+    margin-bottom: -4px;
+    margin-left: -1em;
+}
+
+h3 {
+    margin: auto;
+    margin-bottom: 1em;
+    color: #fff;
+    text-shadow: rgb(30, 52, 26) 2px 2px;
+}
+
+h2 {
+    font-size: 0.8em;
+    color: #fff;
+    text-shadow: rgb(30, 52, 26) 1px 2px;
+    margin: 1em 0;
+}
+
+.flex1 {
+    order: 1;
+    display: flex;
+    justify-content: start;
+    flex: 1;
+}
+
+.flex2 {
+    order: 3;
+    display: flex;
+    justify-content: end;
+}
+
+.logo {
+    order: 2;
+    width: 200px;
+    display: flex;
+    flex: 1;
+}
+
+.forms {
+    background-color: rgba(30, 52, 26, 0.70);
+    box-shadow: rgb(30, 52, 26) 5px 8px;
+    border-radius: 10px;
+    padding: 1em;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2em;
+    width: 400px;
+    height: auto;
+}
+
+
+.form-wrapper {
+    width: 350px;
+    border-radius: 10px;
+    padding: 3em 1em;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.forminput {
+    display: flex;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.form-data {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.7em;
+    color: #fff;
+    text-shadow: rgb(30, 52, 26) 1px 1px;
+}
+
+input[type=text] {
+    background-color: rgba(176, 193, 173, 0.9);
+    width: 300px;
+    height: auto;
+    padding: 1em;
+    margin: 0.2em auto;
+    border: 1px solid #fff;
+    /* Tällä deletoidaan oletus-tyyli bordereille */
+    border-radius: 5px;
+    font-size: 0.8em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type=radio] {
+    display: inline;
+}
+
+input[type=file] {
+    margin: auto;
+    color: white;
+}
+
+button[type=submit] {
+    padding: 8px;
+    width: 130px;
+    border: none;
+    border: solid 1px white;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 0.7em;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 0;
+}
+
+::placeholder {
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+.preview {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.form-input img {
+    width: 100%;
+    display: none;
+    margin-bottom: 30px;
+    justify-content: center;
+    border: rgb(30, 52, 26) 10px solid;
+}
+
+.single img {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .navipalkki {
+        width: 100%;
+        border: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /*hakukenttä*/
+    .flex1 {
+        order: 2;
+        margin: -5em 0;
+       
+    }
+
+    /*postaus ja profiili*/
+    .flex2 {
+        order: 3;
+        margin-top: 3em;
+    }
+
+    /*logo*/
+    .logo {
+        order: 1;
+        width: 180px;
+        margin-top: -0.5em;
+    }
+}

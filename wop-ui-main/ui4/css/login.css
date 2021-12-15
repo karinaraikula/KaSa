@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* tähän kuva joka näkyy tietokonenäkymässä */
+body {
+    height: 100%;
+    background-image: url("/wop-ui-main/ui4/KUVAT/Tausta3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed;
+
+}
+
+/* tähän kuva joka näkyy mobiilinäkymässä */
+@media only screen and (max-width: 550px) {
+    html, body {
+        background-image: url("/wop-ui-main/ui4/KUVAT/Phone3.jpg");
+        background-attachment: fixed;
+        background-position: center 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    .kirjauduflex {
+        margin: 0;
+        padding: 0;
+    }
+
+    #logo {
+        margin: 0;
+        padding: 0;
+        width: 100px;
+    }
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2em;
+    padding: 10px;
+    width: 250px;
+}
+
+#logo img {
+    width: 100%;
+}
+
+
+.kirjauduflex {
+    background-color: rgba(30, 52, 26, 0.70);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 3em;
+    width: 300px;
+    height: auto;
+}
+
+.kirjaudu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#kirjaudu {
+    font-style: thin;
+    color: white;
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+#kirjaudunappi {
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    padding: 0.7em 2em;
+    margin: 0.5em 0;
+    border: 1px rgb(74, 74, 74) solid;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+form {
+    text-align: center;
+}
+
+input[type=text], [type=password] {
+    background-color: rgb(176, 193, 173, 0.9);
+    width: 200px;
+    margin: 2px;
+    padding: 8px;
+    border: none;
+    /* Tällä deletoidaan oletus-tyyli bordereille */
+    border: solid 1px rgba(176, 193, 173, 0.9);
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    padding: 8px;
+    width: 130px;
+    border: none;
+    border: solid 1px white;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 10px;
+}
+
+::placeholder {
+    color: black;
+}
+
+label {
+    color: white;
+    font-size: 12px;
+}
+
+a {
+    color: white;
+    font-size: 12px;
+}

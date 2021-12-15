@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,100&display=swap"
+        rel="stylesheet">
+    <link href="./css/etusivu.css" rel="stylesheet">
+    <link href="./css/ui4.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="navipalkki">
+            <div class="flex1">
+                <div class="forms">
+                    <div class="hakukenttä" id="haku-wrapper">
+                        <form id="haku-form" class="hakuflex" class="haku" method="GET">
+                            <div class="hakurivi">
+                                <input type="text" id="hakusana" name="hakusana" placeholder="Hae kuvauksesta...">
+                                <button id="hakunappi" type="submit"><img src="KUVAT/haku.png" id="hakukuva"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo">
+                <a href="front.html" id="etusivulinkki">
+                    <img src="KUVAT/logo.png" class="logokuva">
+                </a>
+            </div>
+            <div class="flex2">
+                <a href="add-cat.html" class="addpostlinkki"><img src="KUVAT/add.png" alt="postausnappi"
+                        id="postausnappi"></a>
+                <a href="/wop-ui-main/ui4/logout.html" class="kirjauduuloslinkki" title="Kirjaudu ulos"><img
+                        src="KUVAT/logout.png" alt="kirjauduulosnappi" id="kirjauduulosnappi"></a>
+            </div>
+
+    </header>
+    <div class="container">
+        <h1>Tervetuloa KaSaan!</h1>
+        <ul id="list">
+            <!-- js creates list here -->
+        </ul>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="KUVAT/scrolltop.png" alt="scrolltopnappi"
+            id="scrolltopnappi"></button>
+
+    <script src="./js/check-login.js"></script>
+    <script src="./js/serialize.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/front.js"></script>
+    <script src="./js/sidenav.js"></script>
+    <script src="./js/haku.js"></script>
+    
+</body>
+
+</html>

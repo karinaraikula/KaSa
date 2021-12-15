@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>Kirjaudu sisään</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,100&display=swap"
+        rel="stylesheet">
+    <link href="./css/login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="logo">
+        <img src="KUVAT/logo.png">
+    </div>
+
+    <div class="forms">
+        <div class="form-wrapper" id="login-wrapper">
+            <form action="http://localhost:3000/auth/register" id="add-user-form" class="kirjauduflex" class="kirjaudu"
+                method="post">
+                <div>
+                    <h3 id="kirjaudu">Rekisteröidy</h3>
+                    <input type="text" id="email" name="email"
+                        placeholder="Sähköposti"><br><br>
+                    <input type="text" id="tunnus" name="tunnus" placeholder="Käyttäjänimi"><br><br>
+                    <input type="password" id="salasana" name="salasana" placeholder="Salasana"><br><br>
+                    <button type="submit" id="kirjaudunappi" >Rekisteröidy</button><br><br>
+                    <label for="rekisteröidy">Valmis? Hyvä!</label><br>
+                    <a href="login.html">Kirjaudu sisään</a>
+                </div>
+            </form>
+        </div>
+        <button style="display: none;" id="log-out">Log out</button>
+    </div>
+
+    <script src="./js/serialize.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+
+</html>

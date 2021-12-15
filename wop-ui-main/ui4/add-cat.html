@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>Lisää postaus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,100&display=swap"
+        rel="stylesheet">
+    <link href="./css/etusivu.css" rel="stylesheet">
+    <link href="./css/addpost.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="navipalkki">
+            <div class="flex1">
+                <div class="hakukenttä" style="visibility: hidden;">
+                    <input id="searchKasa" type="search" onkeyup="searchKasa()" class="haku" placeholder="Etsi kasasta">
+                    <img src="KUVAT/haku.png" id="hakukuva">
+                </div>
+            </div>
+            <div class="logo">
+                <a href="front.html" id="etusivulinkki">
+                    <img src="KUVAT/logo.png" class="logo">
+                </a>
+            </div>
+            <div class="flex2">
+                <a href="add-cat.html" class="addpostlinkki"><img src="KUVAT/add.png" alt="postausnappi"
+                        id="postausnappi"></a>
+                <a href="/wop-ui-main/ui4/logout.html" class="kirjauduulos"title="Kirjaudu ulos"><img src="KUVAT/logout.png" alt="kirjauduulosnappi" id="kirjauduulosnappi"></a>
+            </div>
+
+    </header>
+
+    <div class="forms">
+        <div class="form-wrapper">
+            <h3>LISÄÄ KASAAN</h3>
+            <div class="preview">
+                <img id="file-ip-1-preview" width="300px">
+            </div>
+            <form action="http://localhost:3000/cat" method="post" class="light-border" enctype="multipart/form-data"
+                id="addCatForm">
+                <div class="form-data">
+                    <h2>1. Lisää kuvaus:</h2>
+                    <input class="forminput" type="text" name="Kuvaus" placeholder="Kuvaus" autocomplete="off">
+                    <h2>2. Mikä on postauksesi aihe?</h2>
+                    <label for="Tyyppi">
+                    <input class="forminput" type="radio" name="Tyyppi" placeholder="Tyyppi" value="1">Tarvitsen neuvoa!</label>
+                    <label for="Tyyppi">
+                    <input class="forminput" type="radio" name="Tyyppi" placeholder="Tyyppi" value="2">Inspiroin muita!</label>
+                    <h2>3. Lisää tiedosto:</h2>
+                    <input class="forminput" type="file" name="post" accept="image/*" placeholder="Lisää tiedosto"
+                        onchange="showPreview(event);">
+                    <button type="submit">Julkaise!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/serialize.js"></script>
+    <script src="./js/preview.js"></script>
+    <script src="./js/add-cat.js"></script>
+</body>
+
+</html>

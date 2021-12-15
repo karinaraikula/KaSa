@@ -1,0 +1,410 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    width: 100%;
+    padding-top: 1em;
+}
+
+h1 {
+    width: 80%;
+    align-self: center;
+    padding: 1.5em;
+    text-align: center;
+    color: rgb(30, 52, 26);
+    font-weight: 350;
+}
+
+r html, body {
+    min-height: 100vh;
+    background-image: url("/wop-ui-main/ui4/KUVAT/Tausta1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 5%;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#postausnappi, #kirjauduulosnappi {
+    width: 40px;
+    margin-bottom: -4px;
+    margin-right: 1em;
+}
+
+.navipalkki {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid rgb(30, 52, 26);
+    padding-bottom: 1em;
+    flex-basis: auto;
+}
+
+.logokuva {
+    width: 200px;
+}
+
+.navipalkki>*:first-child {
+    align-self: flex-end;
+}
+
+.navipalkki>*:last-child {
+    align-self: flex-end;
+}
+
+.flex1 {
+    order: 1;
+    display: flex;
+    justify-content: start;
+    flex: 1;
+}
+
+.flex2 {
+    order: 3;
+    display: flex;
+    justify-content: end;
+    flex: 1;
+}
+
+.logo {
+    order: 2;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    /*margin-left: -25px /*logon keskitys postauksiin nähden*/
+}
+
+
+@media only screen and (max-width: 850px) {
+
+    .logo {
+        margin: 0,
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-top: 1em
+    }
+
+    html, body {
+
+        background-image: url("/wop-ui-main/ui4/KUVAT/Padi1.jpg");
+        background-attachment: fixed;
+        background-position-y: -10em;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navipalkki {
+        width: 100%;
+        border: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /*hakukenttä*/
+    .flex1 {
+        order: 2;
+        margin: -5.5em 1em;
+
+    }
+
+    /*postaus ja logout*/
+    .flex2 {
+        order: 3;
+    }
+
+    /*logo*/
+    .logo {
+        order: 1;
+        width: 180px;
+    }
+
+    #scrolltopnappi {
+        width: 20px;
+        position: fixed;
+        /* Fixed/sticky sijainti */
+        bottom: 20px;
+        /* Nappi alas */
+        right: 10px;
+        /* Nappi reunasta irti */
+        z-index: 99;
+        /* Päällekkäisyyden estäminen */
+        border: none;
+        /* Poista reunat */
+        outline: none;
+    }
+}
+
+
+.hakuflex {
+    border: none;
+    display: inline;
+    align-self: center;
+    font-size: 1.5em;
+}
+
+.hakurivi {
+    display: flex;
+    background-color: rgb(239, 239, 239);
+    border-radius: 7px;
+}
+
+.buttondiv{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#hakukuva {
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+#hakunappi{ /* Nollaa napin tyylittelyt */
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+input[type="search"] {
+    outline: none;
+    border: none;
+}
+
+#hakusana {
+    padding: 0.5em;
+    margin: 0.3em;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#hakusana:focus{
+    outline: none;
+}
+
+.hakuflex {
+    display: flex;
+    flex-direction: row;
+    align-self: baseline;
+    border-radius: 10px;
+    border: 3px solid rgb(30, 52, 26);
+    margin-left: 10px;
+    margin-top: 3em;
+    font-size: 0.5em;
+}
+
+
+.addpostnappi {
+    margin-right: 1em;
+}
+
+
+.kirjauduulos {
+    margin-left: 1em;
+}
+
+.kortti {
+    background-color: rgba(30, 52, 26, 0.70);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: auto;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 400px;
+    height: auto;
+}
+
+ul {
+    margin: auto;
+    padding: 0;
+    width: 35em;
+    color: #f5f5f5;
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+h2 {
+    padding: 5px;
+}
+
+p {
+    padding: 5px;
+}
+
+a {
+    margin: 0;
+}
+
+#scrolltopnappi {
+    width: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+    border: none;
+    outline: none;
+}
+
+/*Hilataan logoa alaspäin, alareuna nappien alareunan kanssa linjassa*/
+#etusivulinkki {
+    height: 85px;
+    margin-top: 25px;
+}
+
+
+.deletebutton { /* Nollaa tyylittelyt */
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.modbutton img, .deletebutton img {
+    width: 32px;
+    padding: 3px;
+   
+}
+
+::placeholder { /* Hakukentän placeholder-teksti */
+    font-size: 1.2em;
+}
+
+.perttidiv { /* Kommenttiboxi */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(30, 52, 26);
+    border-radius: 3px;
+    background-color: rgba(176, 193, 173, 0.4);
+    max-height: 80px;
+    overflow: scroll;
+    font-size: 0.9em;
+
+}
+
+.morttidiv { /* Postausboxi */
+    background-color: rgba(176, 193, 173, 0.4);
+    border: 1px solid rgba(30, 52, 26);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#kuvaid { /* Tyyppikuva */
+    width: 35px;
+    margin-bottom: -10px;
+    margin-right: 5px;
+}
+
+#p3 {   /* Tyyppiotsikko */
+    font-weight: bold; 
+    text-shadow: rgba(30, 52, 26);
+}
+
+#kuvaus {
+    font-weight:bold;
+    font-style: italic;
+    margin: 5px;
+}
+
+#pvm {
+    font-size: 0.7em;
+}
+
+#postkuva {
+    border: 1px solid rgba(30, 52, 26);
+    border-bottom: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#commentForm{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#kommenttiinput{
+    padding: 0;
+    margin: 0;
+}
+
+#kommenttiinput::placeholder{
+    color: #ccc;
+    padding-left: 5px;
+}
+
+#kommenttinappi{
+    display: flex;
+    background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+#kommenttinappi img{
+    width: 35px;
+}
+
+#kommenttipoisto{
+
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+#kommenttipoisto img{
+    display: block;
+    width: 15px;
+}
+
+#kokokommentti{
+    display: flex;
+    flex-direction: row;
+}
+
+.perttidiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#kappale{
+
+    overflow-wrap: break-word;
+}
+
+
