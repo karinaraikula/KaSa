@@ -43,11 +43,11 @@ const user_post = async (req, res, next) => {
     const tulos = await addUser(tunnus, email, hash, next);
     if (tulos.affectedRows > 0) {
       res.json({
-        message: 'user added',
+        message: 'Käyttäjä on lisätty KaSaan!',
         UserID: tulos.insertId,
       });
     } else {
-      next(httpError('No user inserted', 400));
+      next(httpError('Käyttäjän lisääminen epäonnistui', 400));
     }
   } catch (e) {
     console.log('user_post error', e.message);

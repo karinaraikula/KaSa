@@ -117,6 +117,8 @@ const createCatCards = (cats, ul, user, refresh) => {
                         poistonappi.innerHTML = '<img src=\'KUVAT/delete.png\'>';
                         poistonappi.id = "kommenttipoisto"
                         poistonappi.addEventListener('click', async () => {
+                            //TÄHÄN LISÄSIN IF CONFIRM
+                            if (confirm('Haluatko varmasti poistaa postauksen?')) {
                             const fetchOptions = {
                                 method: 'DELETE',
                                 headers: {
@@ -129,6 +131,7 @@ const createCatCards = (cats, ul, user, refresh) => {
                             console.log('delete response', json);
                             // tähän alertti ja päivitä sivu location hfref jne
                             refresh();
+                        }
                         })
                     }
                 });

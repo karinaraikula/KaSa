@@ -74,11 +74,11 @@ const cat_post = async (req, res, next) => {
     if (thumb) {
       if (tulos.affectedRows > 0) {
         res.json({
-          message: 'cat added',
+          message: 'Julkaisusi on KaSattu!',
           PostID: tulos.insertId,
         });
       } else {
-        next(httpError('No cat inserted', 400));
+        next(httpError('Julkaisuasi ei lisätty!', 400));
       }
     }
   } catch (e) {
@@ -115,11 +115,11 @@ const cat_put = async (req, res, next) => {
     );
     if (tulos.affectedRows > 0) {
       res.json({
-        message: 'cat modified',
+        message: 'Julkaisusi muokkaus onnistui!',
         PostID: tulos.insertId,
       });
     } else {
-      next(httpError('No cat modified', 400));
+      next(httpError('Muokkaus ei onnistunut', 400));
     }
   } catch (e) {
     console.log('cat_put error', e.message);
@@ -137,7 +137,7 @@ const cat_delete = async (req, res, next) => {
     );
     if (vastaus.affectedRows > 0) {
       res.json({
-        message: 'cat deleted',
+        message: 'Julkaisusi on poistettu',
         cat_id: vastaus.insertId,
       });
     } else {

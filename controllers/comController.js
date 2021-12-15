@@ -59,7 +59,7 @@ const com_post = async (req, res, next) => {
     if (thumb) {
       if (tulos.affectedRows > 0) {
         res.json({
-          message: 'com added',
+          message: 'Kommentti lisätty',
           KommenttiID: tulos.insertId,
         });
       } else {
@@ -83,7 +83,7 @@ const com_delete = async (req, res, next) => {
     );
     if (vastaus.affectedRows > 0) {
       res.json({
-        message: 'com deleted',
+        message: 'Kommentti poistettu',
         KommenttiID: vastaus.insertId,
       });
     } else {
