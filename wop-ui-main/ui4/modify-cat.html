@@ -32,12 +32,9 @@
     </header>
     <div class="forms">
         <div class="form-wrapper">
-            <h3>KASAA JULKAISUSI</h3>
-            <div class="preview">
-                <img id="file-ip-1-preview" width="300px">
-            </div>
-            <form action="http://localhost:3000/cat" method="post" class="light-border" enctype="multipart/form-data"
-                id="addCatForm">
+            <h3>MUOKKAA JULKAISUASI</h3>
+            <form action="http://localhost:3000/cat" method="put" class="light-border" enctype="multipart/form-data"
+                id="modCatForm">
                 <div class="form-data">
                     <h2>1. Lisää kuvaus:</h2>
                     <input class="forminput" type="text" name="Kuvaus" placeholder="Kuvaus" autocomplete="off">
@@ -46,17 +43,18 @@
                     <input class="forminput" type="radio" name="Tyyppi" placeholder="Tyyppi" value="1">Tarvitsen neuvoa!</label>
                     <label for="Tyyppi">
                     <input class="forminput" type="radio" name="Tyyppi" placeholder="Tyyppi" value="2">Inspiroin muita!</label>
-                    <h2>3. Lisää tiedosto:</h2>
+                    <!--<h2>3. Lisää tiedosto:</h2>
                     <input class="forminput" type="file" name="post" accept="image/*" placeholder="Lisää tiedosto"
-                        onchange="showPreview(event);">
+                        onchange="showPreview(event);">-->
                     <button type="submit">Julkaise!</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!---  <script src="./js/check-login.js"></script> -->
-    <script src="./js/add-cat.js"></script>
+    <script src="./js/check-login.js"></script>
+    <script src="./js/serialize.js/"></script>
+    <script src="./js/modify-cat.js"></script>
     <script src="./js/preview.js"></script>
 </body>
 
