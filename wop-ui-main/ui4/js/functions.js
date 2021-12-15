@@ -118,7 +118,7 @@ const createCatCards = (cats, ul, user, refresh) => {
                         poistonappi.id = "kommenttipoisto"
                         poistonappi.addEventListener('click', async () => {
                             //TÄHÄN LISÄSIN IF CONFIRM
-                            if (confirm('Haluatko varmasti poistaa postauksen?')) {
+                            if (confirm('Haluatko varmasti poistaa kommentin?')) {
                             const fetchOptions = {
                                 method: 'DELETE',
                                 headers: {

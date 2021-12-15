@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muokkaa postausta</title>
     <link href="./css/etusivu.css" rel="stylesheet">
     <link href="./css/addpost.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -33,19 +34,20 @@
     <div class="forms">
         <div class="form-wrapper">
             <h3>MUOKKAA JULKAISUASI</h3>
-            <form action="http://localhost:3000/cat" method="put" class="light-border" enctype="multipart/form-data"
-                id="modCatForm">
+            <div class="preview">
+                <img id="file-ip-1-preview" width="300px">
+            </div>
+            <form id="modCatForm">
                 <div class="form-data">
-                    <h2>1. Lisää kuvaus:</h2>
+                    <h2>1. Muokkaa kuvaustasi:</h2>
                     <input class="forminput" type="text" name="Kuvaus" placeholder="Kuvaus" autocomplete="off">
                     <h2>2. Mikä on postauksesi aihe?</h2>
                     <label for="Tyyppi">
-                    <input class="forminput" type="radio" name="Tyyppi" placeholder="Tyyppi" value="1">Tarvitsen neuvoa!</label>
+                        <input class="forminput" type="radio" name="Tyyppi" placeholder="Tyyppi" value="1">Tarvitsen
+                        neuvoa!</label>
                     <label for="Tyyppi">
-                    <input class="forminput" type="radio" name="Tyyppi" placeholder="Tyyppi" value="2">Inspiroin muita!</label>
-                    <!--<h2>3. Lisää tiedosto:</h2>
-                    <input class="forminput" type="file" name="post" accept="image/*" placeholder="Lisää tiedosto"
-                        onchange="showPreview(event);">-->
+                        <input class="forminput" type="radio" name="Tyyppi" placeholder="Tyyppi" value="2">Inspiroin
+                        muita!</label>
                     <button type="submit">Julkaise!</button>
                 </div>
             </form>
@@ -53,9 +55,10 @@
     </div>
 
     <script src="./js/check-login.js"></script>
-    <script src="./js/serialize.js/"></script>
+    <script src="./js/serialize.js"></script>
     <script src="./js/modify-cat.js"></script>
-    <script src="./js/preview.js"></script>
+
+
 </body>
 
 </html>

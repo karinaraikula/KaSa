@@ -11,10 +11,13 @@ const getHaku = async (input, next) => {
 	  Tyyppi,
     Aikaleima,
     Postaaja,
-	  Useri.Tunnus as Kayttajanimi
+	  Useri.Tunnus as Kayttajanimi,
+	  Tyypit.Tyyppiluokka as Posttyyppi
 	  FROM Post 
 	  JOIN Useri ON 
 	  Postaaja = Useri.UseriID
+	  JOIN Tyypit ON
+	  Tyyppi = Tyypit.TyyppiID
 	  WHERE Kuvaus LIKE %${input}%`);
   try {
     const [rows] = await promisePool.execute(
@@ -25,10 +28,13 @@ const getHaku = async (input, next) => {
 	  Tyyppi,
     Aikaleima,
     Postaaja,
-	  Useri.Tunnus as Kayttajanimi
+	  Useri.Tunnus as Kayttajanimi,
+	  Tyypit.Tyyppiluokka as Posttyyppi
 	  FROM Post 
 	  JOIN Useri ON 
 	  Postaaja = Useri.UseriID
+	  JOIN Tyypit ON
+	  Tyyppi = Tyypit.TyyppiID
 	  WHERE Kuvaus LIKE 
 	  ?`,
       [`%${input}%`]

@@ -76,7 +76,7 @@ r html, body {
 .flex2 {
     order: 3;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex: 1;
 }
 

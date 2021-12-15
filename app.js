@@ -11,6 +11,7 @@ const passport = require('./utils/pass');
 const { httpError } = require('./utils/errors');
 
 const app = express();
+const port = 3000;
 
 app.use(cors());
 
@@ -46,3 +47,5 @@ app.use((err, req, res, next) => {
     message: err.message || 'internal server error',
   });
 });
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
