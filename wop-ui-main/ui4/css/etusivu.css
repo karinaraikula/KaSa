@@ -22,7 +22,7 @@ h1 {
 
 r html, body {
     min-height: 100vh;
-    background-image: url("/wop-ui-main/ui4/KUVAT/Tausta1.jpg");
+    background-image: url("app/wop-ui-main/ui4/KUVAT/Tausta1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 5%;
