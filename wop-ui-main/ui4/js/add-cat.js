@@ -1,5 +1,5 @@
 'use strict';
-const url = 'https://10.114.34.18/app'; // change url when uploading to server
+const url = 'https://10.114.34.18/app/'; // change url when uploading to server
 
 // select existing html elements
 const addForm = document.querySelector('#addCatForm');
@@ -24,7 +24,7 @@ addForm.addEventListener('submit', async (evt) => {
   const response = await fetch(url + '/cat', fetchOptions);
   const json = await response.json();
   alert(json.message);
-  location.href = '/front.html';
+  location.href = 'front.html';
 });
 
 
