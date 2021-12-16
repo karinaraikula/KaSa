@@ -9,7 +9,7 @@
 /* tähän kuva joka näkyy tietokonenäkymässä */
 body {
     height: 100%;
-    background-image: url("app/wop-ui-main/ui4/KUVAT/Tausta3.jpg");
+    background-image: url("/wop-ui-main/ui4/KUVAT/Tausta3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 40%;
