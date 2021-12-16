@@ -1,5 +1,5 @@
 'use strict';
-const url = 'http://localhost:3000'; // change url when uploading to server
+const url = 'https://10.114.34.83/app'; // change url when uploading to server
 
 // select existing html elements
 const modUserForm = document.querySelector('#modUserForm');
