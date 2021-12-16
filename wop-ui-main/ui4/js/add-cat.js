@@ -24,7 +24,7 @@ addForm.addEventListener('submit', async (evt) => {
   const response = await fetch(url + '/cat', fetchOptions);
   const json = await response.json();
   alert(json.message);
-  location.href = 'front.html';
+  location.href = 'app/front.html';
 });
 
 
