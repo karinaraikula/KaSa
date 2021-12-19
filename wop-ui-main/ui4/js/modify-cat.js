@@ -1,5 +1,5 @@
 'use strict';
-const url = 'https://10.114.34.18/app'; // change url when uploading to server
+const url = 'https://10.114.34.83/app'; // change url when uploading to server
 
 // get query parameter
 const getQParam = (param) => {
@@ -36,6 +36,12 @@ const getCat = async (id) => {
   const inputs = modForm.querySelectorAll('input');
   inputs[0].value = cat.Kuvaus;
   inputs[1].value = cat.Tyyppi;
+  inputs[2].value= cat.Tyyppi;
+  
+
+  
+  
+
   if (user.Oikeus === 0) modForm.querySelector('select').value = cat.Postaaja;
 };
 
@@ -72,6 +78,7 @@ const getUsers = async () => {
   }
 };
 */
+
 // submit modify form
 modForm.addEventListener('submit', async (evt) => {
   evt.preventDefault();
@@ -82,6 +89,7 @@ modForm.addEventListener('submit', async (evt) => {
       delete data[prop];
     }
   }
+
   const fetchOptions = {
     method: 'PUT',
     headers: {

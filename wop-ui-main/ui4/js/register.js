@@ -1,5 +1,5 @@
 'use strict';
-const url = 'https://10.114.34.18/app'; // change url when uploading to server
+const url = 'https://10.114.34.83/app'; // change url when uploading to server
 
 // select existing html elements
 const addUserForm = document.querySelector('#add-user-form');

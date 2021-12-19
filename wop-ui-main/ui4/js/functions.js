@@ -14,6 +14,7 @@ const moro = async (id) => {
     }
 };
 
+
 const createCatCards = (cats, ul, user, refresh) => {
 
     // clear ul
@@ -198,7 +199,7 @@ const createCatCards = (cats, ul, user, refresh) => {
             modButton.href = `modify-cat.html?id=${cat.PostID}`;
             modButton.classList.add('modbutton');
 
-            // delete selected cat
+            // delete selected post
             const delButton = document.createElement('button');
             delButton.innerHTML = '<img src=\'KUVAT/delete.png\'>';
             delButton.classList.add('deletebutton');

@@ -12,6 +12,7 @@ hakuForm.addEventListener('submit', async (evt) => {
   console.log(haku);
   
 
+
 const response = await fetch(url + '/haku?' + haku);
   const cats = await response.json();
   console.log('login response', cats);

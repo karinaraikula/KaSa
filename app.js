@@ -12,6 +12,7 @@ const { httpError } = require('./utils/errors');
 
 const app = express();
 
+
 app.use(cors());
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -26,7 +27,6 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 
 app.use(express.static('./uploads/'));
 app.use('/thumbnails', express.static('thumbnails'));
-app.use(express.static('./wop-ui-main/ui4/'));
 
 app.use(passport.initialize());
 
