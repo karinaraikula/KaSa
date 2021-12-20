@@ -57,10 +57,12 @@ const cat_post = async (req, res, next) => {
   }
 
   try {
+    /*
     const thumb = await makeThumbnail(
       req.file.path,
       './thumbnails/' + req.file.filename
     );
+    */
     const { Kuvaus, Tyyppi } = req.body;
     const tulos = await addCat(
       req.file.filename,
@@ -71,7 +73,7 @@ const cat_post = async (req, res, next) => {
     );
 
 
-    if (thumb) {
+    //if (thumb) {
       if (tulos.affectedRows > 0) {
         res.json({
           message: 'Julkaisusi on KaSattu!',
@@ -80,7 +82,7 @@ const cat_post = async (req, res, next) => {
       } else {
         next(httpError('Julkaisuasi ei lisätty!', 400));
       }
-    }
+   // }
   } catch (e) {
     console.log('cat_post error', e.message);
     next(httpError('internal server error', 500));

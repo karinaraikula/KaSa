@@ -21,7 +21,7 @@ const createCatCards = (cats, ul, user, refresh) => {
     cats.forEach(async (cat) => {
         // create li with DOM methods
         const img = document.createElement('img');
-        img.src = url + '/thumbnails/' + cat.Filename;
+        img.src = url + '/' + cat.Filename;
         img.classList.add('resp');
 
         const figure = document.createElement('figure').appendChild(img);
