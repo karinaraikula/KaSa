@@ -164,36 +164,6 @@ const createCatCards = (cats, ul, user, refresh) => {
         comForm.appendChild(nappi);
         ul.appendChild(li);
 
-        /*if (user.Oikeus === 0 || user.UseriID === cat.Kayttajanimi) {
-        const comdeleteButton = document.createElement('button');
-            comdeleteButton.innerHTML = 'Delete';
-            comdeleteButton.classList.add('deletebutton');
-            comdeleteButton.addEventListener('click', async () => {
-                if (confirm('Haluatko varmasti poistaa kommentin?')) {
-                    const fetchOptions = {
-                        method: 'DELETE',
-                        headers: {
-                            Authorization: 'Bearer ' + sessionStorage.getItem('token'),
-                        },
-                    };
-                    try {
-                        const response = await fetch(
-                            url + '/com/' + cat.KommenttiID,
-                            fetchOptions
-                        );
-                        const json = await response.json();
-                        console.log('delete response', json);
-                        getCom();
-                    } catch (e) {
-                        console.log(e.message);
-                    }
-                }
-            })
-            pertti.appendChild(comdeleteButton);
-        };
-        */
-
-
         if (user.Oikeus === 0 || user.UseriID === cat.Postaaja) {
             // link to modify form
             const modButton = document.createElement('a');
@@ -240,4 +210,33 @@ const createCatCards = (cats, ul, user, refresh) => {
 };
 
 
+//ylimääräinen koodikokeilu
 
+        /*if (user.Oikeus === 0 || user.UseriID === cat.Kayttajanimi) {
+        const comdeleteButton = document.createElement('button');
+            comdeleteButton.innerHTML = 'Delete';
+            comdeleteButton.classList.add('deletebutton');
+            comdeleteButton.addEventListener('click', async () => {
+                if (confirm('Haluatko varmasti poistaa kommentin?')) {
+                    const fetchOptions = {
+                        method: 'DELETE',
+                        headers: {
+                            Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+                        },
+                    };
+                    try {
+                        const response = await fetch(
+                            url + '/com/' + cat.KommenttiID,
+                            fetchOptions
+                        );
+                        const json = await response.json();
+                        console.log('delete response', json);
+                        getCom();
+                    } catch (e) {
+                        console.log(e.message);
+                    }
+                }
+            })
+            pertti.appendChild(comdeleteButton);
+        };
+        */
