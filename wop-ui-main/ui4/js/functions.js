@@ -31,9 +31,12 @@ const createCatCards = (cats, ul, user, refresh) => {
         h2.innerHTML = `${cat.Kayttajanimi}`;
 
         const p1 = document.createElement('p');
-        p1.innerHTML = `${cat.Aikaleima}`;
         p1.setAttribute("id", "pvm");
-
+        const date = new Date(cat.Aikaleima);
+        const recipeDate = date.getHours() + ':' + (date.getMinutes()) + ' ' + date.getDate() + '.' + (date.getMonth() + 1) + '.' +
+            date.getFullYear();
+        p1.innerHTML = `${recipeDate}`;
+    
         const mortti = document.createElement('div');
         mortti.classList.add('morttidiv');
 
